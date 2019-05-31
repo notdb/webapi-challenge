@@ -26,13 +26,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+	Express is built on top of node, as Node.js is relatively minimal, and it supports routing to make developing APIs easier by breaking them into easier to understand parts.
+
+
 - [ ] Describe Middleware?
+  
+  Middleware adds additional functionality to an api
 
 - [ ] Describe a Resource?
 
+	A resource is something that the client requests from the server. It's usually some sort of data like an object or array. 
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+	2xx HTTP status codes depending on the request they sent
+
 - [ ] How can we partition our application into sub-applications?
+
+	Using routes
 
 ## Project Setup
 
