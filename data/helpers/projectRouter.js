@@ -49,4 +49,36 @@ router.post("/", async (req, res) => {
   }
 });
 
+// update (put) request
+
+router.put("/:id", async (req, res) => {
+  try {
+    const projects = await projMod.update(req.params.id, req.body);
+    if (!req.body) {
+      res.status(400).json({ message: "need to have a body to change" });
+    } else {
+      res.status(200).json(projects);
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error updating the project"
+    });
+  }
+});
+
+// delete (delete) request
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const projects = await projMod.remove(req.params.id);
+    res.status(200).json(projects);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error updating the project"
+    });
+  }
+});
+
 module.exports = router;
